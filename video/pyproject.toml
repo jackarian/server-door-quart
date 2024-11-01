@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "video"
+version = "0.1.0"
+description = ""
+authors = ["Giacomo Arianna <ariannagiacomo@gmail.com>"]
+readme = "README.md"
+packages = [{include = "video", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+quart = "^0.19.6"
+quart-babel = "^1.0.7"
+pymodbustcp = "^0.3.0"
+pymodbus = "^3.7.4"
+quart-schema = "^0.20.0"
+msgspec = "^0.18.6"
+opencv-contrib-python = "^4.10.0.84"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
