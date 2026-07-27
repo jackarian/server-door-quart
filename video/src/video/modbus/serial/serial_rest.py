@@ -9,5 +9,5 @@ class ModbusSerialRestController:
 
     def execute(self,command:ModbusPayload):
         self.service.connect()
-        self.service.write_coil(command.output, command.outputValue, slave=command.slaveId)
+        self.service.write_coil(command.output, command.outputValue, device_id=command.slaveId)
         self.service.close()
