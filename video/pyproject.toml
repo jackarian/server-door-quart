@@ -1,25 +1,26 @@
 [project]
 name = "video"
 version = "0.1.0"
-description = ""
-authors = [{name="Giacomo Arianna",email="ariannagiacomo@gmail.com"}]
+description = "Manage iot"
+authors = [
+    {name = "jackarian",email = "ariannagiacomo@gmail.com"}
+]
+license = "Apache Licence 2.0"
 readme = "README.md"
-packages = [{include = "video", from = "src"}]
-
-[project.poetry.dependencies]
-python = "^3.13"
-quart = "^0.19.6"
-quart-babel = "^1.0.7"
-pymodbustcp = "^0.3.0"
-pymodbus = "^3.7.4"
-quart-schema = "^0.20.0"
-gpiozero = "^2.0.1"
-smbus2 = "^0.5.0"
-pyserial = "^3.5"
-hypercorn = "^0.17.3"
-msgspec = "^0.21.1"
+requires-python = ">=3.12"
+dependencies = [
+    "quart (>=0.21.0,<0.22.0)",
+    "hypercorn (>=0.18.0,<0.19.0)",
+    "msgspec (>=0.21.1,<0.22.0)",
+    "quart-babel (>=1.0.7,<2.0.0)",
+    "pymodbus (>=3.14.0,<4.0.0)",
+    "quart-schema (>=0.23.0,<0.24.0)",
+    "gpiozero (>=2.0.1.post3,<3.0.0)",
+    "smbus2 (>=0.6.1,<0.7.0)",
+    "pyserial (>=3.5,<4.0)"
+]
 
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
